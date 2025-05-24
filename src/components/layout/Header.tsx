@@ -1,14 +1,28 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import { scroller } from 'react-scroll';
 import logo from '../../assets/images/logo.png';
 
 
 const Header: React.FC = () => {
   const location = useLocation();
+  const navigate = useNavigate();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  const isActive = (path: string) => {
-    return location.pathname === path;
+  const handleNavigateAndScroll = (sectionId: string) => {
+    if (location.pathname !== '/') {
+      navigate('/', {
+        state: { scrollTo: sectionId },
+      });
+    } else {
+      scroller.scrollTo(sectionId, {
+        duration: 500,
+        delay: 0,
+        smooth: true,
+        offset: -180,
+      });
+    }
   };
 
   return (
@@ -21,43 +35,27 @@ const Header: React.FC = () => {
 
         {/* Desktop Navigation */}
         <nav className="hidden items-end space-x-8 md:flex justify-end">
-          <Link
-            to="/"
-            className={`font-medium transition-colors ${
-              isActive('/')
-                ? 'text-primary'
-                : 'text-secondary hover:text-primary'
-            }`}
+          <button
+            onClick={() => handleNavigateAndScroll('home')}
+            className="font-medium text-secondary hover:text-primary cursor-pointer transition-colors"
           >
             Home
-          </Link>
-          <Link
-            to="/gallery"
-            className={`font-medium transition-colors ${
-              isActive('/gallery')
-                ? 'text-primary'
-                : 'text-secondary hover:text-primary'
-            }`}
+          </button>
+          <button
+            onClick={() => handleNavigateAndScroll('gallery')}
+            className="font-medium text-secondary hover:text-primary cursor-pointer transition-colors"
           >
             Gallery
-          </Link>
-          <Link
-            to="/contact"
-            className={`font-medium transition-colors ${
-              isActive('/contact')
-                ? 'text-primary'
-                : 'text-secondary hover:text-primary'
-            }`}
+          </button>
+          <button
+            onClick={() => handleNavigateAndScroll('contact')}
+            className="font-medium text-secondary hover:text-primary cursor-pointer transition-colors"
           >
             Contact
-          </Link>
+          </button>
           <Link
             to="/menu"
-            className={`font-medium transition-colors ${
-              isActive('/menu')
-                ? 'text-primary'
-                : 'text-secondary hover:text-primary'
-            }`}
+            className="font-medium text-secondary hover:text-primary cursor-pointer transition-colors"
           >
             Menu
           </Link>
@@ -65,8 +63,9 @@ const Header: React.FC = () => {
 
         {/* Order Online Button */}
         <Link
-          to="/order-online"
-          className="hidden rounded-none bg-primary px-6 py-2 font-semibold text-white transition-colors hover:bg-[#a93a00] md:block"
+          to="https://www.zomato.com/"
+          target="_blank"
+          className="order-button-nav order-button md:flex"
         >
           Order Online
         </Link>
@@ -86,46 +85,39 @@ const Header: React.FC = () => {
       {mobileMenuOpen && (
         <div className="container mx-auto px-4 pb-4 md:hidden">
           <nav className="flex flex-col space-y-4">
-            <Link
-              to="/"
-              className={`font-medium ${
-                isActive('/') ? 'text-primary' : 'text-secondary'
-              }`}
-              onClick={() => setMobileMenuOpen(false)}
+
+            <button
+              onClick={() => {setMobileMenuOpen(false); handleNavigateAndScroll('home');}}
+              className="font-medium text-secondary hover:text-primary cursor-pointer transition-colors text-left"
             >
               Home
-            </Link>
-            <Link
-              to="/gallery"
-              className={`font-medium ${
-                isActive('/gallery') ? 'text-primary' : 'text-secondary'
-              }`}
-              onClick={() => setMobileMenuOpen(false)}
+            </button>
+
+            <button
+              onClick={() => {setMobileMenuOpen(false); handleNavigateAndScroll('gallery');}}
+              className="font-medium text-secondary hover:text-primary cursor-pointer transition-colors text-left"
             >
               Gallery
-            </Link>
+            </button>
 
-            
-            <Link
-              to="/contact"
-              className={`font-medium ${
-                isActive('/contact') ? 'text-primary' : 'text-secondary'
-              }`}
-              onClick={() => setMobileMenuOpen(false)}
+            <button
+              onClick={() => {setMobileMenuOpen(false); handleNavigateAndScroll('contact');}}
+              className="font-medium text-secondary hover:text-primary cursor-pointer transition-colors text-left"
             >
               Contact
-            </Link>
+            </button>
+
             <Link
               to="/menu"
-              className={`font-medium ${
-                isActive('/menu') ? 'text-primary' : 'text-secondary'
-              }`}
+              className="font-medium text-secondary hover:text-primary cursor-pointer transition-colors"
               onClick={() => setMobileMenuOpen(false)}
             >
               Menu
             </Link>
+            
             <Link
-              to="/order-online"
+              to="https://www.zomato.com/"
+              target="_blank"
               className="w-full bg-primary py-2 text-center font-semibold text-white"
               onClick={() => setMobileMenuOpen(false)}
             >

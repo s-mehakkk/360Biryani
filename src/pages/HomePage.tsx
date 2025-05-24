@@ -1,5 +1,8 @@
 import { Link } from 'react-router-dom';
 import biryaniHero from '../assets/images/biryani2.png';
+import { useLocation } from 'react-router-dom';
+import { useEffect } from 'react';
+import { scroller } from 'react-scroll';
 
 const Star = () => (
   <svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" data-bbox="47.613 49.942 104.775 100.116" viewBox="47.613 49.942 104.775 100.116" fill="currentColor" height="40" width="40" role="presentation" aria-hidden="true" aria-label="">
@@ -29,11 +32,24 @@ const DeliveryIcon = () => (
 );
 
 const HomePage: React.FC = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.state?.scrollTo) {
+      scroller.scrollTo(location.state.scrollTo, {
+        duration: 500,
+        delay: 0,
+        smooth: true,
+        offset: -80,
+      });
+    }
+  }, [location.state]);
+
   return (
-    <div>
+    <div id="home">
          {/* Hero Section */}
   <section className="bg-yellow py-12 md:py-20">
-  <div className="container mx-0 pr-0 relative">
+  <div className="custom-container container mx-0 pr-0 relative">
     <div className="flex flex-col md:flex-row items-start">
       {/* Text */}
       <div className="w-full md:w-1/2 text-left pt-8 md:pt-16 px-4 md:px-0 md:pr-12">
@@ -46,16 +62,13 @@ const HomePage: React.FC = () => {
         <h2 className="text-5xl md:text-9xl font-bold uppercase text-primary leading-tight mb-6 md:whitespace-nowrap">
           it's hot
         </h2>
-        <Link
-          to="/order-online"
-          className="inline-block px-6 py-3 text-base md:text-xl bg-primary text-white  hover:bg-secondary transition"
-        >
-          Order Online
+        <Link to="https://www.zomato.com/" target="_blank" className="order-button inline-block">
+            Order Online
         </Link>
       </div>
 
       {/* Image Container */}
-      <div className="relative w-full md:w-3/4 h-[600px] mt-[-200px] md:mt-0 md:overflow-visible overflow-hidden">
+      <div className="relative w-full md:w-3/4 h-[600px] mt-[-200px] ml-[50px] md:mt-0 md:overflow-visible overflow-hidden">
         <div className="absolute md:static md:ml-auto md:mr-0 left-[20px] h-full w-[1000px] md:w-full">
           <img
             src={biryaniHero}
@@ -285,15 +298,9 @@ const HomePage: React.FC = () => {
                 Real Biryani. Real Fast
               </h3>
               <p className="text-center md:text-center">
-                Craving comfort? We bring slow-cooked <br /> biryani straight to your door in just 30–40 <br /> minutes. Packed in eco-friendly bags and <br /> terracotta pots, every order carries the warmth <br /> of tradition—fresh, pure, and made with love.
+                Craving comfort? We bring slow-cooked <br /> biryani straight to your door in just 30–40 <br /> minutes. Packed in eco-friendly bags, <br /> every order carries the warmth <br /> of tradition—fresh, pure, and made with love.
               </p>
               <div className="mt-6 text-center md:text-center flex justify-center">
-                <Link
-                  to="/order-online"
-                  className="inline-block  bg-white px-6 py-2  text-black transition-colors hover: hover:text-primary flex justify-center w-[230px] h[60px]"
-                >
-                  Order Online
-                </Link>
               </div>
             </div>
           </div>
@@ -304,9 +311,9 @@ const HomePage: React.FC = () => {
       <section id="gallery" className="bg-background py-12 scroll-mt-16">
         <div className="container mx-auto px-4">
           <div className="mb-8 text-center">
-            <h2 className="text-2xl font-bold uppercase text-secondary md:text-3xl">
+            <a className="text-2xl font-bold uppercase text-secondary md:text-3xl" href='https://www.instagram.com/biryani.360'>
               Follow @Biryani.360
-            </h2>
+            </a>
           </div>
           <div className="grid grid-cols-2 gap-2 md:grid-cols-5 md:gap-4">
             {/* Instagram image placeholders */}
