@@ -1,6 +1,10 @@
 import { Link } from 'react-router-dom';
 import biryaniHero from '../assets/images/biryani2.png';
 import image1 from '../assets/images/instagram-1.jpg';
+import image2 from '../assets/images/instagram-2.jpg';
+import image3 from '../assets/images/instagram-3.jpg';
+import image4 from '../assets/images/instagram-4.jpg';
+import image5 from '../assets/images/instagram-5.jpg';
 import { useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
 import { scroller } from 'react-scroll';
@@ -323,16 +327,16 @@ const HomePage: React.FC = () => {
                 <img src={image1} alt="" />
               </div>
               <div className="aspect-square bg-light-tan">
-                <img src='instagram-2.jpg' alt="" />
+                <img src={image2} alt="" />
               </div>
               <div className="aspect-square bg-light-tan">
-                <img src='instagram-3.jpg' alt="" />
+                <img src={image3} alt="" />
               </div>
               <div className="aspect-square bg-light-tan">
-                <img src='instagram-4.jpg' alt="" />
+                <img src={image4} alt="" />
               </div>
               <div className="aspect-square bg-light-tan">
-                <img src='instagram-5.jpg' alt="" />
+                <img src={image5} alt="" />
               </div>
           
         </div>
