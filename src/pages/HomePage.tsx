@@ -301,7 +301,7 @@ const HomePage: React.FC = () => {
               </div>
             </div>
             <div>
-              <h2 className="mb-3 text-center text-2xl font-bold uppercase md:text-center md:text-[40px] ">
+              <h2 className="md:mb-3 md:mt-0 mt-8 mb-1 text-center text-2xl font-bold uppercase md:text-center md:text-[40px] ">
                 We Deliver More
               </h2>
               <h2 className="mb-6 text-center text-2xl font-bold uppercase md:text-center md:text-[40px] ">
@@ -328,7 +328,7 @@ const HomePage: React.FC = () => {
               Follow @Biryani.360
             </a>
           </div>
-          <div className="grid grid-cols-2 gap-2 md:grid-cols-5 md:gap-4">
+          <div className="grid grid-cols-2 gap-2 md:grid-cols-6 md:gap-4">
             {/* Instagram image placeholders */}
             
               <div className="aspect-square bg-light-tan">
@@ -342,6 +342,9 @@ const HomePage: React.FC = () => {
               </div>
               <div className="aspect-square bg-light-tan">
                 <img src={image4} alt="" />
+              </div>
+              <div className="aspect-square bg-light-tan">
+                <img src={image5} alt="" />
               </div>
               <div className="aspect-square bg-light-tan">
                 <img src={image5} alt="" />
