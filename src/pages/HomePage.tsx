@@ -59,38 +59,39 @@ const HomePage: React.FC = () => {
   return (
     <div id="home">
          {/* Hero Section */}
-  <section className="bg-yellow py-12 md:py-20">
-  <div className="custom-container container mx-0 pr-0 relative">
-    <div className="flex flex-col md:flex-row items-start">
-      {/* Text */}
-      <div className="w-full md:w-1/2 text-left pt-8 md:pt-16 px-4 md:px-0 md:pr-12">
-        <h1 className="text-2xl md:text-4xl font-bold uppercase text-secondary mb-4 md:whitespace-nowrap">
-          Open for Delivery & Pick Up
-        </h1>
-        <h2 className="text-5xl md:text-9xl font-bold uppercase text-primary leading-tight md:whitespace-nowrap">
-          Get it while
-        </h2>
-        <h2 className="text-5xl md:text-9xl font-bold uppercase text-primary leading-tight mb-6 md:whitespace-nowrap">
-          it's hot
-        </h2>
-        <Link to="https://www.zomato.com/" target="_blank" className="order-button inline-block">
-            Order Online
-        </Link>
-      </div>
+      <section className="bg-yellow py-12 md:py-3 relative overflow-x-hidden">
+        <div className="custom-container container mx-auto px-4 relative">
+          <div className="flex flex-col md:flex-row items-start relative">
 
-      {/* Image Container */}
-      <div className="relative w-full md:w-3/4 h-[600px] mt-[-200px] ml-[50px] md:mt-0 md:overflow-visible overflow-hidden">
-        <div className="absolute md:static md:ml-auto md:mr-0 left-[20px] h-full w-[1000px] md:w-full">
-          <img
-            src={biryaniHero}
-            alt="Delicious Biryani"
-            className="h-full w-full object-cover md:object-contain"
-          />
+            {/* Text Container - Positioned over the image space on larger screens */}
+            <div className="w-full md:w-2/3 text-left pt-8 md:pt-16 md:pr-12 z-20 relative
+                      md:absolute md:top-24 md:left-16 md:translate-x-[-18px] 
+                      bg-transparent md:bg-transparent p-4 md:p-0">
+              <h1 className="text-xl md:text-5xl font-bold uppercase text-secondary mb-4">
+                Open for Delivery & Pick Up
+              </h1>
+              <h2 className="text-5xl md:text-8xl font-bold uppercase text-primary leading-tight">
+                Get it while
+              </h2>
+              <h2 className="text-5xl md:text-8xl font-bold uppercase text-primary leading-tight mb-6">
+                it's hot
+              </h2>
+              <Link to="https://www.zomato.com/" target="_blank" className="order-button inline-block">
+                Order Online
+              </Link>
+            </div>
+
+            {/* Image Container */}
+            <div className="md:ml-[270px] md:mt-[200px] ml-[0px] translate-x-[140px] mt-[-100px] relative w-full md:w-4/5 h-[280px] md:h-[800px] mr-0 overflow-hidden">
+              <img
+                src={biryaniHero}
+                alt="Delicious Biryani"
+                className="h-full w-full object-contain scale-125 md:scale-110"
+              />
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
+      </section>
 
 
 
@@ -293,20 +294,21 @@ const HomePage: React.FC = () => {
 
 
       {/* Delivery Section */}
-      <section className="bg-primary py-12 text-white ">
+      <section className="bg-primary py-20 text-white">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2">
             <div className="flex items-center justify-center">
               
-              <div className="h-80 w-80 rounded">
+              <div className="h-100 w-80 rounded">
                 <img src= {Bag} alt=""/>
               </div>
             </div>
             <div>
-              <h2 className="mb-6 text-center text-2xl font-bold uppercase md:text-center md:text-[40px] ">
-                We Deliver More<br />
-                Than Food
+              <h2 className="md:mb-3 md:mt-0 mt-8 mb-1 text-center text-2xl font-bold uppercase md:text-center md:text-[40px] ">
+                We Deliver More
               </h2>
+              <h2 className="mb-6 text-center text-2xl font-bold uppercase md:text-center md:text-[40px] ">
+                Than Food</h2>
               
               <h3 className="mb-4 text-center font-bold uppercase md:text-center text-[22px]">
                 Real Biryani. Real Fast
@@ -329,7 +331,7 @@ const HomePage: React.FC = () => {
               Follow @Biryani.360
             </a>
           </div>
-          <div className="grid grid-cols-2 gap-2 md:grid-cols-5 md:gap-4">
+          <div className="grid grid-cols-2 gap-2 md:grid-cols-6 md:gap-4">
             {/* Instagram image placeholders */}
             
               <div className="aspect-square bg-light-tan">
@@ -343,6 +345,9 @@ const HomePage: React.FC = () => {
               </div>
               <div className="aspect-square bg-light-tan">
                 <img src={image4} alt="" />
+              </div>
+              <div className="aspect-square bg-light-tan">
+                <img src={image5} alt="" />
               </div>
               <div className="aspect-square bg-light-tan">
                 <img src={image5} alt="" />

@@ -33,9 +33,6 @@ body {
 .order-button {
   font-family: "Avenir LT", "sans-serif";
   background-color: var(--primary);
-  width: 200px;
-  height: 60px;
-  font-size: 18px;
   align-items: center;
   display: flex;
   justify-content: center;
@@ -44,6 +41,12 @@ body {
   font-weight: 200;
   transition: all 0.3s ease;
   border-radius: 4px;
+}
+
+.order-button {
+  width: 120px;
+  height: 40px;
+  font-size: 12px;
 }
 
 .order-button:hover {
@@ -127,5 +130,11 @@ body {
 @media (min-width: 1280px) {
   .custom-container {
     max-width: 1380px !important;
+  }
+
+  .order-button {
+    width: 200px;
+    height: 60px;
+    font-size: 18px;
   }
 }

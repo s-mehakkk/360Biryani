@@ -15,6 +15,10 @@ module.exports = {
       fontSize: {
         'lg-plus': ['1.17rem', { lineHeight: '2.2' }],  // 18px size with relaxed line-height
       },
+      scale: {
+        '110': '1.10',
+        '115': '1.15',
+      },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
