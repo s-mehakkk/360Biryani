@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import biryaniHero from '../assets/images/biryani2.png';
+import image1 from '../assets/images/instagram-1.jpg';
 import { useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
 import { scroller } from 'react-scroll';
@@ -319,7 +320,7 @@ const HomePage: React.FC = () => {
             {/* Instagram image placeholders */}
             
               <div className="aspect-square bg-light-tan">
-                <img src='instagram-1.jpg' alt="" />
+                <img src={image1} alt="" />
               </div>
               <div className="aspect-square bg-light-tan">
                 <img src='instagram-2.jpg' alt="" />
