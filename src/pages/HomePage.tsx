@@ -5,11 +5,13 @@ import image2 from '../assets/images/instagram-2.jpg';
 import image3 from '../assets/images/instagram-3.jpg';
 import image4 from '../assets/images/instagram-4.jpg';
 import image5 from '../assets/images/instagram-5.jpg';
+import image6 from '../assets/images/AMCB.jpg';
 import CK from '../assets/images/CK.jpg';
 import HB from '../assets/images/HB.jpg';
 import MSK from '../assets/images/MSK.jpg';
 import OB from '../assets/images/OB.jpg';
 import Bag from '../assets/images/bag.png';
+
 
 import { useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
@@ -350,8 +352,10 @@ const HomePage: React.FC = () => {
                 <img src={image5} alt="" />
               </div>
               <div className="aspect-square bg-light-tan">
-                <img src={image5} alt="" />
+                <img src={image6} alt="" />
               </div>
+
+
           
         </div>
         </div>
