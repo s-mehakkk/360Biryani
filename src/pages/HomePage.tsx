@@ -48,38 +48,39 @@ const HomePage: React.FC = () => {
   return (
     <div id="home">
          {/* Hero Section */}
-  <section className="bg-yellow py-12 md:py-20">
-  <div className="custom-container container mx-0 pr-0 relative">
-    <div className="flex flex-col md:flex-row items-start">
-      {/* Text */}
-      <div className="w-full md:w-1/2 text-left pt-8 md:pt-16 px-4 md:px-0 md:pr-12">
-        <h1 className="text-2xl md:text-4xl font-bold uppercase text-secondary mb-4 md:whitespace-nowrap">
-          Open for Delivery & Pick Up
-        </h1>
-        <h2 className="text-5xl md:text-9xl font-bold uppercase text-primary leading-tight md:whitespace-nowrap">
-          Get it while
-        </h2>
-        <h2 className="text-5xl md:text-9xl font-bold uppercase text-primary leading-tight mb-6 md:whitespace-nowrap">
-          it's hot
-        </h2>
-        <Link to="https://www.zomato.com/" target="_blank" className="order-button inline-block">
-            Order Online
-        </Link>
-      </div>
+      <section className="bg-yellow py-12 md:py-3 relative overflow-x-hidden">
+        <div className="custom-container container mx-auto px-4 relative">
+          <div className="flex flex-col md:flex-row items-start relative">
 
-      {/* Image Container */}
-      <div className="relative w-full md:w-3/4 h-[600px] mt-[-200px] ml-[50px] md:mt-0 md:overflow-visible overflow-hidden">
-        <div className="absolute md:static md:ml-auto md:mr-0 left-[20px] h-full w-[1000px] md:w-full">
-          <img
-            src={biryaniHero}
-            alt="Delicious Biryani"
-            className="h-full w-full object-cover md:object-contain"
-          />
+            {/* Text Container - Positioned over the image space on larger screens */}
+            <div className="w-full md:w-2/3 text-left pt-8 md:pt-16 md:pr-12 z-20 relative
+                      md:absolute md:top-24 md:left-16 
+                      bg-transparent md:bg-transparent p-4 md:p-0">
+              <h1 className="text-xl md:text-5xl font-bold uppercase text-secondary mb-4">
+                Open for Delivery & Pick Up
+              </h1>
+              <h2 className="text-5xl md:text-8xl font-bold uppercase text-primary leading-tight">
+                Get it while
+              </h2>
+              <h2 className="text-5xl md:text-8xl font-bold uppercase text-primary leading-tight mb-6">
+                it's hot
+              </h2>
+              <Link to="https://www.zomato.com/" target="_blank" className="order-button inline-block">
+                Order Online
+              </Link>
+            </div>
+
+            {/* Image Container */}
+            <div className="md:ml-[270px] md:mt-[200px] ml-[0px] translate-x-[140px] mt-[-100px] relative w-full md:w-4/5 h-[280px] md:h-[800px] mr-0 overflow-hidden">
+              <img
+                src={biryaniHero}
+                alt="Delicious Biryani"
+                className="h-full w-full object-contain scale-125 md:scale-110"
+              />
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
+      </section>
 
 
 
