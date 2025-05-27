@@ -5,6 +5,10 @@ import image2 from '../assets/images/instagram-2.jpg';
 import image3 from '../assets/images/instagram-3.jpg';
 import image4 from '../assets/images/instagram-4.jpg';
 import image5 from '../assets/images/instagram-5.jpg';
+import CK from '../assets/images/CK.jpg';
+import HB from '../assets/images/HB.jpg';
+import MSK from '../assets/images/MSK.jpg';
+import OB from '../assets/images/OB.jpg';
 import { useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
 import { scroller } from 'react-scroll';
@@ -173,7 +177,7 @@ const HomePage: React.FC = () => {
       <div className="overflow-hidden rounded bg-white text-center w-full max-w-[376px]">
         <div className="w-full h-[376px] bg-gray-200 relative">
           <img
-            src="HB.jpg"
+            src={HB}
             alt="Hyderabadi Biryani"
             className="w-full h-full object-cover"
           />
@@ -189,7 +193,7 @@ const HomePage: React.FC = () => {
       <div className="overflow-hidden rounded bg-white text-center w-full max-w-[376px]">
         <div className="w-full h-[376px] bg-gray-200 relative">
           <img
-            src="MSK.jpg"
+            src={MSK}
             alt="Mutton Seekh Kebab"
             className="w-full h-full object-cover"
           />
@@ -205,7 +209,7 @@ const HomePage: React.FC = () => {
       <div className="overflow-hidden rounded bg-white text-center w-full max-w-[376px]">
         <div className="w-full h-[376px] bg-gray-200 relative">
           <img
-            src="CK.jpg"
+            src={CK}
             alt="Chicken Korma"
             className="w-full h-full object-cover"
           />
@@ -276,7 +280,7 @@ const HomePage: React.FC = () => {
         </div>
       </div>
       <div className="flex items-center hidden md:flex">
-        <img src="OB.jpg" alt="About Biryani 360" className="w-full h-full" />
+        <img src={OB} alt="About Biryani 360" className="w-full h-full" />
       </div>
     </div>
   </div>
