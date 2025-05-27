@@ -65,7 +65,7 @@ const HomePage: React.FC = () => {
 
             {/* Text Container - Positioned over the image space on larger screens */}
             <div className="w-full md:w-2/3 text-left pt-8 md:pt-16 md:pr-12 z-20 relative
-                      md:absolute md:top-24 md:left-16 
+                      md:absolute md:top-24 md:left-16 md:translate-x-[-18px] 
                       bg-transparent md:bg-transparent p-4 md:p-0">
               <h1 className="text-xl md:text-5xl font-bold uppercase text-secondary mb-4">
                 Open for Delivery & Pick Up
@@ -291,20 +291,21 @@ const HomePage: React.FC = () => {
 
 
       {/* Delivery Section */}
-      <section className="bg-primary py-12 text-white ">
+      <section className="bg-primary py-20 text-white">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2">
             <div className="flex items-center justify-center">
               
-              <div className="h-80 w-80 rounded">
+              <div className="h-100 w-80 rounded">
                 <img src= {Bag} alt=""/>
               </div>
             </div>
             <div>
-              <h2 className="mb-6 text-center text-2xl font-bold uppercase md:text-center md:text-[40px] ">
-                We Deliver More<br />
-                Than Food
+              <h2 className="mb-3 text-center text-2xl font-bold uppercase md:text-center md:text-[40px] ">
+                We Deliver More
               </h2>
+              <h2 className="mb-6 text-center text-2xl font-bold uppercase md:text-center md:text-[40px] ">
+                Than Food</h2>
               
               <h3 className="mb-4 text-center font-bold uppercase md:text-center text-[22px]">
                 Real Biryani. Real Fast
