@@ -9,6 +9,8 @@ import CK from '../assets/images/CK.jpg';
 import HB from '../assets/images/HB.jpg';
 import MSK from '../assets/images/MSK.jpg';
 import OB from '../assets/images/OB.jpg';
+import Bag from '../assets/images/bag.png';
+
 import { useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
 import { scroller } from 'react-scroll';
@@ -294,7 +296,7 @@ const HomePage: React.FC = () => {
             <div className="flex items-center justify-center">
               
               <div className="h-80 w-80 rounded">
-                <img src="bag.png" alt=""/>
+                <img src= {Bag} alt=""/>
               </div>
             </div>
             <div>
