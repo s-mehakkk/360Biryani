@@ -254,26 +254,29 @@ const HomePage: React.FC = () => {
           Crafted with care.<br />
           Rooted in tradition.
         </h3>
-        <p className="text-center text-secondary md:text-left flex justify-center">
-          At Biryani 360, food isn't just food—it's a story.
+        <p className="text-center text-secondary flex justify-center 
+              md:text-left md:font-elegantSerif md:text-lg-plus md:tracking-widestLight">
+  At Biryani 360, food isn't just food—it's a story.
+</p>
+
+<p className="text-center text-secondary flex justify-center 
+              md:text-left md:font-elegantSerif md:text-lg-plus md:tracking-widestLight">
+        Inspired by the royal kitchens of Lucknow and the
         </p>
-        <p className="text-center text-secondary md:text-left flex justify-center">
-          Inspired by the royal kitchens of Lucknow and the
+        <p className="text-center text-secondary flex justify-center 
+              md:text-left md:font-elegantSerif md:text-lg-plus md:tracking-widestLight">        bustling streets of Moradabad, we recreate heritage
         </p>
-        <p className="text-center text-secondary md:text-left flex justify-center">
-          bustling streets of Moradabad, we recreate heritage
+        <p className="text-center text-secondary flex justify-center 
+              md:text-left md:font-elegantSerif md:text-lg-plus md:tracking-widestLight">        with exacting standards and a deep respect for
         </p>
-        <p className="text-center text-secondary md:text-left flex justify-center">
-          with exacting standards and a deep respect for
+        <p className="text-center text-secondary flex justify-center 
+              md:text-left md:font-elegantSerif md:text-lg-plus md:tracking-widestLight">        tradition. From the first aroma to the final bite, our
         </p>
-        <p className="text-center text-secondary md:text-left flex justify-center">
-          tradition. From the first aroma to the final bite, our
+        <p className="text-center text-secondary flex justify-center 
+              md:text-left md:font-elegantSerif md:text-lg-plus md:tracking-widestLight">        biryani isn't just made—it's meticulously crafted to
         </p>
-        <p className="text-center text-secondary md:text-left flex justify-center">
-          biryani isn't just made—it's meticulously crafted to
-        </p>
-        <p className="text-center text-secondary md:text-left flex justify-center">
-          comfort, connect, and celebrate.
+        <p className="text-center text-secondary flex justify-center 
+              md:text-left md:font-elegantSerif md:text-lg-plus md:tracking-widestLight">        comfort, connect, and celebrate.
         </p>
         <div className="mt-6 text-center md:text-left flex justify-center">
           <Link to="/contact" className="order-button inline-block">

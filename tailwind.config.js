@@ -6,6 +6,15 @@ module.exports = {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      fontFamily: {
+        elegantSerif: ['Merriweather', 'Georgia', 'serif'],
+      },
+      letterSpacing: {
+        widestLight: '0.02em',
+      },
+      fontSize: {
+        'lg-plus': ['1.17rem', { lineHeight: '2.2' }],  // 18px size with relaxed line-height
+      },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
